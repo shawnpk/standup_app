@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StandupApp</title>
+    <title>Standup App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://kit.fontawesome.com/c2f17496ca.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class='sidebar-mini'>
+    <div class="wrapper">
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/sidebar' %>
+
+      <div class="content-wrapper">
+        <%= yield %>
+      </div>
+
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
